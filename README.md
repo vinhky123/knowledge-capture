@@ -21,16 +21,27 @@ Given a single seed URL — for example
 
 ## Installation
 
+Requires Python 3.11+.
+
+### Linux/macOS
+
 ```bash
-pip install -e ".[dev]"
-
-pip install -e ".[browser]"
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e ".[dev,browser,llm]"
 playwright install chromium
-
-pip install -e ".[llm]"
 ```
 
-Requires Python 3.11+.
+### Windows (PowerShell)
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -e ".[dev,browser,llm]"
+playwright install chromium
+```
 
 ## Usage
 
